@@ -40,8 +40,8 @@ int main() {
     
     // 3. Call the mean function passing it this array and output the 
     // value returned.
-    cout << "Mean: " << mean(doubles, arraySize);
-    cout << endl << endl;
+    cout << "Mean: " << mean(doubles, arraySize) << endl;
+    cout << endl;
     
     // 4. Ask the user for the index (0 to 9) of the value they want to remove.
     int index;

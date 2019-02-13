@@ -63,7 +63,7 @@ int main() {
 	cout << "Enter number of deals (simulations): " << endl;
 	cin >> deals;
 	
-	for (unsigned int i = 0; i < deals; i++) {
+	for (int i = 0; i < deals; i++) {
 		deck.shuffleDeck();
 		dealt.clear();
 		

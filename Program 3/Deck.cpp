@@ -27,7 +27,7 @@ Deck::Deck() {
 	s = 'c';
 	for (unsigned int i = 13; i > 0; i--) {
 		theDeck.push_back(Card(s, i));
-	}	
+	}
 }
 
 Card Deck::dealCard() {
