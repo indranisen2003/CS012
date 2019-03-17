@@ -99,32 +99,8 @@ SortedSet & SortedSet::operator&(SortedSet &set) {
 }
 
 void SortedSet::add(int data) {
-	IntNode* newNode = new IntNode(data);
-	if (head == nullptr) {
-		head = newNode;
-		tail = newNode;
-	}
-	else if (head -> data > newNode -> data) {
-		newNode -> next = head;
-		head = newNode;
-	}
-	else if (newNode -> data > tail -> data) {
-		tail -> next = newNode;
-		tail = newNode;
-	}
-	else {
-		bool shouldAdd = true;
-		IntNode* currNode = head;
-		while (currNode -> next != nullptr && currNode -> next -> data <= newNode -> data) {
-			if (currNode -> next -> data == data) {
-				shouldAdd = false;
-			}
-			currNode = currNode -> next;
-		}
-		if (shouldAdd) {
-			newNode -> next = currNode -> next;
-			currNode -> next = newNode;
-		}
+	if (!in(data)) {
+		IntList::insert_ordered(data);
 	}
 }
 
